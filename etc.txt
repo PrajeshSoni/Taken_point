@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Take Point </title>
+</head>
+
+    <body>
+        <div class="container-fluid">
+            <br>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+
+                        <th scope="col">company name</th>
+                        <th scope="col">Logo</th>
+                        <th scope="col">city</th>
+                        <th scope="col">state</th>
+                        <th scope="col">country</th>
+                        <th scope="col">Zip Code</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">company Email</th>
+                        <th scope="col">website Url</th>
+
+
+                    </tr>
+                </thead>
+
+
+                <?php
+                while ($row = mysqli_fetch_array($rs)) {
+                ?>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%=%><?php print $row['com_name']; ?>
+                        </td>    
+                        <td>
+                            <img src="photo/<%=%><?php print $row['logo']; ?>" alt="Free Website Template by Free-Template.co" class="img-fluid" width="100" height="100"></td>
+                        <td>
+                            <%=%><?php print $row['city']; ?>
+                        </td>
+                        <td>
+                            <%=%><?php print $row['state']; ?>
+                        </td>
+                        <td>
+                            <%=%><?php print $row['country']; ?>
+                        </td>
+                        <td>
+                            <%=%><?php print $row['zip']; ?>
+                        </td>
+                        <td>
+                            <%=%><?php print $row['phone']; ?>
+                        </td>
+                        <td>
+                            <%=%><?php print $row['email']; ?>
+                        </td>
+                        <td>
+                            <%=%><?php print $row['website_url']; ?>
+                        </td>
+                    </tr>
+                </tbody>
+                        <?php } ?>
+            </table>
+        </div>
+    </body>
+</html>
